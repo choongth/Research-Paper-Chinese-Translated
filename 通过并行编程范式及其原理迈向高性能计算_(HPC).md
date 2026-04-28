@@ -44,7 +44,7 @@ Department of Computer Science & Engineering, Galaxy Global Group of Institution
 
 <div align="center">
 
-![Local Image](./images/通过并行编程范式及其原理迈向高性能计算_(HPC)/image1.png)
+![Local Image](./images/通过并行编程范式及其原理迈向高性能计算_(HPC)/image1.png)  
 图 1：并发是并行性的超集
 
 </div>
@@ -59,13 +59,13 @@ Department of Computer Science & Engineering, Galaxy Global Group of Institution
     <tr>
         <td>
             <img src="./images/通过并行编程范式及其原理迈向高性能计算_(HPC)/image2.png"><br>
-            <center><b>(a)</b></center><br>
-            <center>图 2（a）：共享架构。</center>
+            <div align="center"><b>(a)</b></div><br>
+            <div align="center">图 2（a）：共享架构。<div>
         </td>
         <td>
             <img src="./images/通过并行编程范式及其原理迈向高性能计算_(HPC)/image3.png"><br>
-            <center><b>(b)</b></center><br>
-            <center>图 2（b）：分布式架构。</center>
+            <div align="center"><b>(b)</b></div><br>
+            <div align="center">图 2（b）：分布式架构。</div>
         </td>
     </tr>
 </table>
@@ -116,7 +116,7 @@ Department of Computer Science & Engineering, Galaxy Global Group of Institution
 
 进程和线程是密切相关的概念。进程是正在执行的程序，进程内可能包含一些独立的单元，这些单元被称为线程。线程是可调度的工作单元，也称为轻量级进程。因此，线程构成进程，或者说是进程的子集[10]。进程和线程都是主动实体，而执行前的简单程序则是一个被动实体。同一个进程中的线程共享相同的地址空间，因此线程间的上下文切换和通信成本很低[10]。线程间的共享也带来了一些难题，将在以下小节中进行探讨。
 
-1. *同步：* 同步是一种用于控制线程执行顺序并解决线程间冲突的机制[7]。它是一种协调线程执行和管理共享地址空间的方法。
+1. *同步：* 同步是一种用于控制线程执行顺序并解决线程间冲突的机制[7]。它是一种协调线程执行和管理共享地址空间的方法。  
 在同步中，互斥和条件同步操作被广泛使用。在互斥机制中，一个线程会阻塞临界区（线程共享的数据区域），其他线程会依次等待轮到自己。调度器负责控制轮次。但在条件同步机制中，线程会被阻塞，直到满足某个特定条件。线程必须等待特定条件达成。因此，同步由程序员或编程系统妥善管理，它是多线程编程的关键结构。
 
 2. *临界区：* 这些区域包含共享的依赖变量，许多线程依赖于它们[7]。它是基于线程的编程中一个重要的结构，允许线程互斥地使用这些区域，防止同时使用。这些区域的大小应该尽可能小。
@@ -149,7 +149,7 @@ Department of Computer Science & Engineering, Galaxy Global Group of Institution
 
 <div align="justify">
 
-如今，处理器价格比以往低廉，因此我们正在构建分布式系统。由于这些因素，并发性在开发中变得不那么重要了。程序员们正在开发各种类型的应用程序，例如数据库管理系统 (DBMS)、L-S 并行技术计算、实时应用程序和嵌入式系统等[9]。
+如今，处理器价格比以往低廉，因此我们正在构建分布式系统。由于这些因素，并发性在开发中变得不那么重要了。程序员们正在开发各种类型的应用程序，例如数据库管理系统 (DBMS)、L-S 并行技术计算、实时应用程序和嵌入式系统等[9]。  
 当一个并发程序在执行期间共享一个或多个处理器时，这被称为多道程序设计；当其子进程在独立的处理器上执行时，这被称为多处理；当加入通信网络时，这被称为分布式处理；这些方法的任意组合被称为混合方法[9]。尽管如此，并行计算仍然是优化利用并行计算资源的基本架构。如果不将操作拆分以进行并发执行，我们就无法实现并行性。一个问题包含许多子问题，需要对主问题中的并发任务进行区分。这正是程序员的技巧所在。
 
 </div>
